@@ -27,7 +27,7 @@ ingress:
   ingressClassName: nginx
   tls:
     enabled: true
-    secretName: taxi-demo-tls
+    secretName: petstore-prod-tls
   hosts:
     - host: petstore.aklivity.io
       paths:

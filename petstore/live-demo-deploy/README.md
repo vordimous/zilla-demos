@@ -4,14 +4,16 @@ This demo deploys a gRPC proxy with Zilla to a K8s cluster with a public endpoin
 
 ## Installing
 
-- Create a `.env` file or export the below variables.
+- Create a k8s secret  with the below yaml.
 
-    ```text
-    NAMESPACE=
-    KAFKA_BOOTSTRAP=
-    KAFKA_USER=
-    KAFKA_PASS=
-    PROM_PASS=
+    ```yaml
+    apiVersion: v1
+    kind: Secret
+    metadata:
+        name: kafka-env
+    data:
+        KAFKA_USER: "<Kafka Username>"
+        KAFKA_PASS: "<Kafka Password>"
     ```
 
 - Set your desired k8s cluster config.

@@ -1,0 +1,9 @@
+
+ingress:
+  enabled: true
+  ingressClassName: nginx
+  host: petstore.aklivity.io
+  path: /apis
+  tls:
+    enabled: true
+    secretName: petstore-prod-tls
