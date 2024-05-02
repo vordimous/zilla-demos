@@ -101,7 +101,7 @@ services:
         SPRING_KAFKA_SECURITY_PROTOCOL: SASL_PLAINTEXT
 
   zilla:
-    image: "ghcr.io/aklivity/zilla:latest"
+    image: "ghcr.io/aklivity/zilla:0.9.79"
     hostname: "zilla"
     command: [ "start", "-v", "-e"]
     volumes:
