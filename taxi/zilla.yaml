@@ -285,3 +285,5 @@ telemetry:
           - scheme: http
             path: /metrics
             port: 7191
+    stdout:
+      type: stdout
