@@ -104,11 +104,11 @@ The mqtt-simulation service includes a `default_routes.json` file, which starts 
    "RANGE_END": 500,
    ```
 
-1. The `taxi-tracking-service` in the [docker-compose.yaml](docker-compose.yaml) file mounts the default config. Update the volume mount to map the load_test file.
+1. The `dispatch-service` in the [docker-compose.yaml](docker-compose.yaml) file mounts the default config. Update the volume mount to map the load_test file.
 
    ```yaml
    volumes:
-     - ./grpc/service/default_routes_load_test.json:/usr/src/app/default_routes.json
+     - ../extras-containers/taxi/grpc/service/default_routes_load_test.json:/usr/src/app/default_routes.json
    ```
 
 1. Ensure the `DEFAUlT_ROUTES` env var is `true` so the service will start the sim and the `PRINT_SIM_LOGS` is true so the container will print the simulator output.
